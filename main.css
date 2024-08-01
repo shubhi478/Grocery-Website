@@ -1,0 +1,167 @@
+
+        .header{
+            background-color: rgb(53, 210, 168);
+            color: rgb(53, 210, 168);
+            font-size: larger;
+        }
+    
+        .navbar{
+            height: 70px;
+        }
+
+
+        #shopnow{
+            width: 12%;
+            visibility: visible;
+            position: absolute;
+            top: 70%;
+            background-color: white;
+        }
+
+        #bg{
+            background-image: url('photos/grocerybg.webp');
+            background-size: cover; 
+            background-position: center;
+            height: 500px;
+            width: auto; 
+           margin-top: -9px;
+           justify-content: center;
+            
+        }
+        @media only screen and (max-width: 400px){
+            #bg{
+                background-image: url(photos/groceryBG-mobile.png);
+                background-size: cover; 
+                background-position: center;
+                
+            }
+
+            #navbarSupportedContent {
+                z-index: 1000;
+                background-color: white;
+                padding: 30px;
+            }
+            #shopnow {
+                width: auto;
+                visibility: visible;
+                position: absolute;
+                top: 228% !important;
+                background-color: white;
+                left: 47% !important;
+            }
+            /* #navtext{
+                color: black;
+
+            } */
+        }
+        #title-div{
+            height: 47%;
+            position: relative;
+            width: 750px;
+        }
+        #title-text{
+            color: rgb(11 70 53);
+            font-size: 55px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
+        .categoryimage{
+            width:-webkit-fill-available;
+            padding: 19px;
+        }
+        .category{
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   
+        }
+        .categorydiv{
+            text-align: center;
+            --tw-bg-opacity: 1;
+            background-color: rgb(243 246 250 / var(--tw-bg-opacity));
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .categorymain{
+            text-align: center;
+        }
+        #category-items{
+            font-size: 19px;
+
+        }
+        .info{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid !important;
+    gap: 25px;
+    padding: 20px;
+}
+.infoimg {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.infoimg img {
+    width: 100%;
+    height: auto;
+    max-width: 100px; 
+    margin-right: 10px; 
+}
+.card-row{
+    justify-content: space-around;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 26px;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+
+   
+}
+
+@media only screen and (max-width: 426px){
+    .card-row{
+        display: block !important;
+    }
+    #title-text{
+        font-size: 32px !important;
+    }
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.card{
+    height: 100%;
+    /* width: 2rem; */
+    box-shadow: 0 4px 8px rgba(122, 69, 69, 0.1);
+    overflow: hidden;
+}
+.section6{
+    background-color: rgb(242 242 242);
+    
+   
+}
+.section6 h2{
+    margin-top: 40px;
+}
+.d-flex{
+    margin-top: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+footer{
+    padding: 20px;
+    margin-top: 30px;
+}
+.card-img-top{
+    width: 18rem;
+}
+
+.section6{
+    background-image: url(photos/footerbg.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/* modal css */
+

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="productdescription.js"></script>
+    <script src="custom.js"></script>
+<style>
+    .available{
+    column-gap: 10px;
+    line-height: 5px;
+    display: flex;
+}
+
+.available div{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.available div a{
+    text-decoration: none;
+    color: black;
+}
+#quantity{
+  justify-content: center;
+    display: flex;
+    padding: 10px;
+    border: 1px solid;
+    margin-top: 40px;
+    width: -webkit-fill-available;
+}
+.impbutton{
+  position: relative;
+    right: 24px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+    <header class="header">.</header>
+   <main class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="photos/icon.jpg" alt="" width="45px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html" style="color: black;">Home</a>
+                </li>
+            
+                <li class="nav-item ">
+                  <a class="nav-link dropdown-toggle" href="#" onclick="shopnowdropdown()" style="color: black;">
+                    Shop Now
+                  </a>
+                 
+                  <ul id="shopnow" style="visibility: hidden; position: absolute; top: 70%; background-color:white;">
+                    <li class="dropdown-item"><a href="" class="nav-link ">Drinks</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Fruits</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Diet</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Snacks</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Healthy</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Diet</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Non-Veg</a></li>
+                  </ul> 
+                
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link " href="mycart.html"style="color: black;" >
+                    My Cart
+                  </a>
+                </li>
+              </ul>
+               
+                <button class="btn btn-outline-success " id="loginbutton" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="visibility:visible;">Login / Sign Up</button>
+                <button class="btn btn-outline-success " id="logoutbutton" type="button" onclick="userLogout()" style="visibility:hidden;">Logout</button>
+              
+            </div>
+          </div>
+        </nav>
+    </div>
+
+        <div class="container-fluid">
+            <br><br><br><br>
+        <div class="row">
+            <div class="col-md-1 col-sm-12"></div>
+            <div class="col-md-6">
+            
+                <div class="card" style="width: 31rem; height: 28rem;">
+                    <div class="card-body">
+                        <img src="photos/card1.webp" class="card-img-top" alt="..." id="productImg">
+                    </div>
+                  </div>
+
+            </div>
+            <div class="col-md-4">
+                <h4 id="productName">Fresh Express Iceberg Garden Salad Blend</h4>
+                <h4 id="productPrice">Rs.49</h4>
+                <br>
+                <p style="font-size: 14px;">Available In :</p>
+                <div class="available">
+                    <div><a href="">small</a></div>
+                    <div><a href="">medium</a></div>
+                    <div><a href="">large</a></div>
+                </div>
+                <div class="container impbutton">
+                  <button  type="button" class="btn btn-outline-success" id="addbtn"  onclick="addqty()">+</button>
+                  <span id="qty">1</span> 
+                  <button  type="button" class="btn btn-outline-success" id="subtractbtn" onclick="subtractqty()">-</button> 
+                </div>
+                <button type="button" id="additem" class="btn btn-success" style="margin-top: 25px; width: -webkit-fill-available;" onclick="additem()">Add to cart</button>
+                <a href="mycart.html"><button type="button" class="btn btn-outline-success" style="margin-top: 25px; width:49%">Go to cart</button></a>
+                <a href="" id="whatsapp"><button type="button" class="btn btn-outline-success" style="margin-top: 25px; width:49%">Share</button></a>
+                <div class="clearfix"><br></div>
+                <p style="font-size: 14px;">Tags : <button type="button" class="btn btn-outline-secondary" style="width: 56px; font-size: 10px;">organic</button>
+                <button type="button" class="btn btn-outline-secondary" style="width: 56px; font-size: 10px;">fresh</button>
+                <button type="button" class="btn btn-outline-secondary" style="width: 64px; font-size: 10px;">dry food</button>
+                </p>
+            </div>
+            <div class="col-md-1 col-sm-12"></div>
+        </div>
+        <div class="clearfix"><br><br></div>
+        <div class="row">
+            <div class="col-md-1 col-sm-12"></div>  
+            <div class="col-md-7 col-sm-12">
+            <h6>Product Details</h6>
+            <hr style="margin: 0;">
+             <br>
+             <p>Discover our wide selection of fresh grocery products, handpicked to ensure the highest quality and freshness. Our offerings include a variety of fruits and vegetables bursting with flavor and packed with essential vitamins and minerals. Enjoy our dairy products, including milk, cheese, and yogurt, sourced from trusted farms to guarantee purity and nutrition. <br><br>  Our fresh meat and seafood options provide premium protein and are perfect for any meal. Don't miss our freshly baked goods, delivering wholesome goodness and delicious taste. We are committed to providing you with the freshest ingredients to support a healthy and balanced lifestyle. Shop with us and taste the difference!</p>
+            </div>  
+            <div class="col-md-3"></div>  
+            <div class="col-md-1 col-sm-12"></div>  
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="row section6">
+            <h2>Make your online shopping easier with us.</h2>
+            <p>Get farm fresh vegetables and grocery dilevered to your door steps. <br>Get every seasonal item fresh from farms at our website.</p>
+            <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-dark" style="width:fit-content; margin: 15px;">Shop Now</button>
+            
+          </div>
+          </div>
+            </div>
+           </main>
+           <footer>
+            <div class="row footer">
+              <div class="col-md-3 col-sm-12">
+              
+                <img src="photos/icon.jpg" alt="" width="15%"><h5 style="color: rgb(36, 174, 135);font-weight: 600">Website</h5>
+                <p>We offer high-quality foods and the best <br>delivery service, and the food market you <br> can blindly trust</p>
+              </div>
+              <div class="col-md-2 col-sm-12">
+              <ul style="list-style: none; padding-inline-start: 0px;" ><h5>Quick Links</h5>
+                <li>About Us</li>
+                <li>Our Services</li>
+                <li>Contact Us</li>
+              </ul>
+              </div>
+              <div class="col-md-2 col-sm-12">
+                <ul style="list-style: none; padding-inline-start: 0px;" ><h5>Community</h5>
+                  <li>Announcement</li>
+                  <li>Answer Centers</li>
+                  <li>Discussion Boards</li>
+                  <li>Giving Works</li>
+                </ul>
+              </div>
+              <div class="col-md-2 col-sm-12">
+                <ul style="list-style: none;padding-inline-start: 0px;"><h5>Our Information</h5>
+                  <li>Terms & Conditions</li>
+                  <li>Privacy Policy</li>
+                  <li>Refund Policy</li>
+                  <li>Disclaimer</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <h5>Subscribe Now</h5>
+                <p>Subscribe your email for newsletter and featured <br>news based on your interest.</p>
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+                  <label for="floatingInputGrid">Email address</label>
+                </div>
+              </div>
+              <div class="clearfix"><br></div>
+              <hr>
+              </div>
+           
+    </footer>
+
+     <!-- modal -->
+ <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"><img src="photos/icon.jpg" width="30px"> Online Grocery </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <button class="btn btn-outline-success" style="width: 50%;" id="loginbtn" onclick="loginpage()">Login</button>
+          <button class="btn btn-outline-success" style="width: 50%;" id="signupbtn" onclick="signuppage()">Sign Up</button>
+        </div>
+        <div class="clearfix"><br></div>
+        <div class="row">
+          <form id="loginform" style="display: none;">
+            <input type="email" class="form-control" placeholder="Email Address" id="loginemail" /><br>
+            <input type="password" class="form-control" placeholder="Password" id="loginpassword"/><br>
+            <a href="#forgot" class="forgot">Forgot password?</a>
+
+          </form>
+        </div>
+
+        <div class="clearfix"><br></div>
+        <div class="row">
+          <form id="signupform" style="display: none;">
+            <input type="email" class="form-control" placeholder="Email Address" id="email"/><br>
+            <input type="number" class="form-control" placeholder="Phone No." id="phoneno"/><br>
+            <input type="password" class="form-control" placeholder="Password" id="password"/><br>
+            <input type="password" class="form-control" placeholder="Confirm Password" id="confirm"/><br>
+
+
+          </form>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="senddata()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

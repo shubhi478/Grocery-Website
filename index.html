@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="custom.js"></script>
+    <script src="description.js"></script>
+    <!-- <script src="myorders.js"></script> -->
+
+  
+</head>
+<body>
+   <header class="header">.</header>
+   <main class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="myaccount.html"><img src="photos/icon.jpg" alt="" width="45px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#" style="color: black;">Home</a>
+                </li>
+            
+                <li class="nav-item ">
+                  <a class="nav-link dropdown-toggle" id="navtext" href="#" onclick="shopnowdropdown()" style="color: black;">
+                    Shop Now
+                  </a>
+                 
+                  <ul id="shopnow" style="visibility: hidden; position: absolute; top: 70%; background-color:white;">
+                    <li class="dropdown-item"><a href="" class="nav-link ">Drinks</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Fruits</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Diet</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Snacks</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Healthy</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Diet</a></li>
+                    <li class="dropdown-item"><a href="" class="nav-link ">Non-Veg</a></li>
+                  </ul> 
+                
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link " href="mycart.html" style="color: black;">
+                    My Cart
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link " href="myorders.html" style="color: black;">
+                    My order
+                  </a>
+                </li>
+
+              </ul>
+               
+                <button class="btn btn-outline-success " id="loginbutton" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="visibility:visible;">Login / Sign Up</button>
+                <button class="btn btn-outline-success " id="logoutbutton" type="button" onclick="userLogout()" style="visibility:hidden;">Logout</button>
+              
+            </div>
+          </div>
+        </nav>
+    </div>
+
+    
+    <div class="row" id="bg">
+       <div id="title-div" data-aos="fade-right">
+        <h2 id="title-text" style="color: rgb(11 70 53);font-size: 55px; text-align: center;" > Healthy food that you deserve to eat fresh</h2>
+    </div>
+    </div>
+
+    <div class="clearfix"><br></div>
+
+<!-- Section 2 = Info -->
+<div class="row info">
+    <div class="infoimg" style="background-color:peachpuff;">
+        <img src="photos/info1.webp" alt="">
+        <h5>Spring cleaning for home appliance.</h5>
+    </div>
+
+    <div class="infoimg" style="background-color: rgb(226, 237, 247);">
+        <img src="photos/info2.webp" alt="">
+        <h5>Food Items for your pet.</h5>
+    </div>
+
+    <div class="infoimg" style="background-color:rgb(217, 236, 210);">
+        <img src="photos/info3.webp" alt="">
+        <h5>Washing products at impressive discounts.</h5>
+    </div>
+
+    <div class="infoimg" style="background-color: rgb(239, 216, 212);">
+        <img src="photos/info4.webp" alt="">
+        <h5>Fresh and healthy meat.</h5>
+    </div>
+</div>
+
+<br>
+
+<!-- Section 3 = Category -->
+<div class="row" style="text-align: center;">
+    <h2>What food would you love to order?</h2>
+    <p>Here order your favourite food from different categories.</p>
+</div>
+    <div class="row category">
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/fruits-items-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Fruits</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/fresh-vegetables-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Veggies</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/breakfast-item-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Breakfast</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/cookies-biscuits-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Biscuits</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/cold-drinks-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Drinks</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/diet-foods-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Diet</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" src="photos/diet-nutrition-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Healthy</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage"  src="photos/raw-chicken-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+                
+            </div>
+            <p id="category-items">Non-Veg</p>
+        </div>
+        <div class="categorymain">
+            <div class="categorydiv">
+                <img class="categoryimage" id="categoryimage" src="photos/fast-food-removebg-preview.png" onmouseover="scaleimage(event)" onmouseout="noscale(event)">
+            </div>
+            <p id="category-items">Milk</p>
+        </div>
+      
+    </div>
+    <div class="clearfix"><br><br><br></div>
+
+    <!-- Section4 =cards-->
+    <div class="row" style="text-align: center;">
+        <h2>Best seller grocery near you</h2>
+        <p>Here order your favourite food from different categories.</p>
+    </div>
+
+    <div class="row card-row">
+          <div class="card" >
+            <img src="photos/card.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.26</h5>
+              <p class="card-text">Fresh Lettuce</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card1.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.49</h5>
+              <p class="card-text">Garden salad blend</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card2.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.55</h5>
+              <p class="card-text">Cabbage salad</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card3.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.44</h5>
+              <p class="card-text">Organic pickle.</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card4.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.50</h5>
+              <p class="card-text">Garden fresh Brocolli.</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+    </div>
+  
+    <div class="clearfix"><br></div>
+
+    <div class="row card-row">
+        <div class="card" >
+            <img src="photos/card5.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.35</h5>
+              <p class="card-text">Frito fun snacks</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card6.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.30</h5>
+              <p class="card-text">Ruffles party size chips</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card7.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.12</h5>
+              <p class="card-text">roasted potato sticks</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card8.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.75</h5>
+              <p class="card-text">Fresh sliced mango</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/card9.webp" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.45</h5>
+              <p class="card-text">Garden fresh cabbage</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          
+    </div>
+
+    <div class="clearfix"><br></div>
+
+    <div class="row card-row">
+        <div class="card" >
+            <img src="photos/fruits-items-removebg-preview.png" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.12</h5>
+              <p class="card-text">Juicy watermelon</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/breakfast-item-removebg-preview.png" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.28</h5>
+              <p class="card-text">Bread slices</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/cookies-biscuits-removebg-preview.png" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.20</h5>
+              <p class="card-text">Chocolate cookies</p>
+              <a   class="btn btn-success">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/diet-foods-removebg-preview.png" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.46</h5>
+              <p class="card-text">Fresh bananas</p>
+              <a   class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+          <div class="card" >
+            <img src="photos/fast-food-removebg-preview.png" class="card-img-top" alt="..." onmouseover="scaleproduct(event)" onmouseout="noscaleproduct(event)">
+            <div class="card-body">
+              <h5 class="card-title">Rs.60</h5>
+              <p class="card-text">Fresh creamy milk</p>
+              <a  class="btn btn-success addcart">Add to cart</a>
+            </div>
+          </div>
+
+    </div>
+    
+    <!-- Section 4= crousal -->
+    <div class="clearfix"><br></div>
+    <div class="row">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="photos/crousal1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="photos/crousal2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="photos/crousal4.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  </div>
+
+       <!--Section 5= card again  -->
+       <div class="row" style="text-align: center;">
+        <h2>Best seller grocery near you</h2>
+        <p>Here order your favourite food from different categories.</p>
+    </div>
+    <div class="row" style=" gap: 20px; margin-left: 13px; padding: 10px;">
+    <div class="card" style="width: 21rem;">
+      <img src="photos/sec5 1.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 21rem;">
+      <img src="photos/sec5 2.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 21rem;">
+      <img src="photos/sec5 3.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 21rem;">
+      <img src="photos/sec5 4.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <!-- Section6= Ending Div -->
+
+    <div class="row section6">
+    <h2 >Make your online shopping easier with us.</h2>
+    <p >Get farm fresh vegetables and grocery dilevered to your door steps. <br>Get every seasonal item fresh from farms at our website.</p>
+    <div class="d-flex" >
+    <button type="button" class="btn btn-dark" style="width:fit-content; margin: 15px;">Shop Now</button>  
+    
+  </div>
+  </div>
+    </div>
+    
+   </main>
+   <footer>
+    <div class="row footer">
+    <div class="col-md-3 col-sm-12">
+    
+      <img src="photos/icon.jpg" alt="" width="15%"><h5 style="color: rgb(36, 174, 135);font-weight: 600">Website</h5>
+      <p>We offer high-quality foods and the best <br>delivery service, and the food market you <br> can blindly trust</p>
+    </div>
+    <div class="col-md-2 col-sm-12">
+    <ul style="list-style: none; padding-inline-start: 0px;" ><h5>Quick Links</h5>
+      <li>About Us</li>
+      <li>Our Services</li>
+      <li>Contact Us</li>
+    </ul>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <ul style="list-style: none; padding-inline-start: 0px;" ><h5>Community</h5>
+        <li>Announcement</li>
+        <li>Answer Centers</li>
+        <li>Discussion Boards</li>
+        <li>Giving Works</li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <ul style="list-style: none;padding-inline-start: 0px;"><h5>Our Information</h5>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+        <li>Refund Policy</li>
+        <li>Disclaimer</li>
+      </ul>
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <h5>Subscribe Now</h5>
+      <p>Subscribe your email for newsletter and featured <br>news based on your interest.</p>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+        <label for="floatingInputGrid">Email address</label>
+      </div>
+    </div>
+    <div class="clearfix"><br></div>
+    <hr>
+    </div>
+   </footer>
+
+
+    <!-- modal -->
+ <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"><img src="photos/icon.jpg" width="30px"> Online Grocery </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <button class="btn btn-outline-success" style="width: 50%;" id="loginbtn" onclick="loginpage()">Login</button>
+          <button class="btn btn-outline-success" style="width: 50%;" id="signupbtn" onclick="signuppage()">Sign Up</button>
+        </div>
+        <div class="clearfix"><br></div>
+        <div class="row">
+          <form id="loginform" style="display: none;">
+            <input type="email" class="form-control" placeholder="Email Address" id="loginemail" /><br>
+            <input type="password" class="form-control" placeholder="Password" id="loginpassword"/><br>
+            <a href="#forgot" class="forgot">Forgot password?</a>
+
+          </form>
+        </div>
+
+        <div class="clearfix"><br></div>
+        <div class="row">
+          <form id="signupform" style="display: none;">
+            <input type="email" class="form-control" placeholder="Email Address" id="email"/><br>
+            <input type="number" class="form-control" placeholder="Phone No." id="phoneno"/><br>
+            <input type="password" class="form-control" placeholder="Password" id="password"/><br>
+            <input type="password" class="form-control" placeholder="Confirm Password" id="confirm"/><br>
+
+
+          </form>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="senddata()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <script>
+    AOS.init();
+   </script>
+</body>
+</html>
